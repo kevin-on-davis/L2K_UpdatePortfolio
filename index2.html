@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name=“viewport” content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>
+ 
+                .carousel-control-next
+                {
+                    float:right;
+                    height: 2vw;
+                    vertical-align: 50%
+                }
+
+                .carousel-control-prev
+                {
+                    float:left;
+                    height: 2vw;
+                    vertical-align: 50%
+                }
+
+
+        </style>
+
+        <script>
+            var skill = ["PL/SQL", "SQL", "Oracle Apex", "Full Stack (In Progress)"];
+            var skill_idx = 0;
+            $("#skill_descriptor").html(skill[skill_idx]);
+
+            var marquee = setInterval(function()
+            {
+                if (skill_idx < skill.length - 1)
+                {
+                    skill_idx += 1;
+                }
+                else
+                {
+                    skill_idx = 0;
+                }
+
+                $("#skill_descriptor").html(skill[skill_idx]);
+            }
+            , 5000);
+        </script>
+    </head>
+
+    <body>
+        <div class="row" style="margin:2vw; background-color: lightskyblue">
+            <div class="panel panel-default">
+                <div class="anel-heading text-left" style="background-color: darkcyan; color:white">
+                    <h1 class="row"><div class="col-sm-4">Kevin Davis </div><div class="col-sm-8 text-left" id="skill_descriptor"></h1>
+                </div>
+
+                <div class="panel-body row" style="height:85%">
+                    <div id="picture_col" class="col-sm-5" style="display:flex">
+                        <img class="img-circle" src="assets/KevinDavis2.jpg" width="75%" data-holder-rendered="true">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div id="bioDetails" class="carousel slide" data-ride="carousel" data-interval="1000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div style="position:sticky; top:0; color:black;background:lightskyblue">
+                                            <h3>About Me</h3>
+                                            <hr/>
+                                    </div>
+                            
+                                    <div style="overflow:scroll">
+                                        <!-- <img id="profilepic" src="assets/KevinDavis.jpg" width="15%"> -->
+                                        IT professional with extensive experience in Oracle technology and strengths in PL/SQL and SQL development, GUI development utilizing Oracle Application Express, Oracle Forms and Reports. Created complete end-to-end Oracle Apex commercial solution to replace obsolete application as well as modernizing business practices using a variety of tools. Experienced in design, development and implementation of solutions to solve complex challenges. Worked in a range of industries including education, HR, education, energy, shipping and manufacturing. Possess excellent writing, research and problem-solving skills in both functional and technical areas, demonstrated through the delivery of various projects as part of development teams, on solo and remote projects. 
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div style="position:sticky; top:0; color:black;background:lightskyblue;">
+                                    <h3>Portfolio</h3>
+                                            <hr/>
+                                    </div>
+                                    <div class="pallette">
+                                        <a href="#" class="app_icon" target="#"><img src="assets/Spok_star_treck_movie_geek-512.png" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/dragon.png" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/tesla_car_wing_doors.png" width="75vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/spider_logo.png" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/Spok_star_treck_movie_geek-512.png" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/Spok_star_treck_movie_geek-512.png" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                        <a href="#" class="app_icon" target="#"><img src="assets/KevinDavis.jpg" width="100vw"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div style="position:sticky; top:0; color:black;background:lightskyblue;">
+                                            <h3>Contact</h3>
+                                            <hr/>
+                                    </div>
+                            
+                                    <form>
+                                        Name:<br/>
+                                        <input type="text" name="person_name" placeholder="Enter full name"><br/><br/>
+                                        Email:<br/>
+                                        <input type="text" name="person_email" placeholder="Enter email address"><br/><br/>
+                                        Message:<br/>
+                                        <textarea name="message" rows="6" cols="100"></textarea><br/><br/>
+                                        <br/>
+                                        <input type="submit" name="save_button"><br/>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Left and right controls -->
+                            <a style="color:black" class="carousel-control-prev" href="#bioDetails" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a style="color:black" class="carousel-control-next" href="#bioDetails" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                    </div>
+                    <ul class="carousel-indicators">
+                            <li data-target="#bioDetails" data-slide-to="0" class="active"></li>
+                            <li data-target="#bioDetails" data-slide-to="1"></li>
+                            <li data-target="#bioDetails" data-slide-to="2"></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="panel-footer text-center" style="background-color: darkcyan; color:white">Copyright © 2019</div>
+            </div>
+        </div>
+    </body>
+
+</html>
