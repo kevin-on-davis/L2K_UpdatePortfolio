@@ -6,7 +6,8 @@ var btn_MyLinkedIn = $("#mylinkedin");
 var btn_MyGitHub = $("#mygithub");
 
 var pg_AboutMe = $("#abt_content");
-var pg_MyWork = $("#pg_MyWork");
+var pg_MyWork = $("#mywork_content");
+var pg_CntctMe = $("#contact_content");
 
 var skill = ["Backend : PL/SQL", "Backend : T/SQL", "Backend : SQL", "Databases : Oracle", "Databases : SQL Server", "Front End : Oracle Apex", "Front End : Oracle Forms", "Front End : Oracle Reports", "Front End : Jasper Reports", "Front End : Crystal Reports"
 , "Full Stack (In Progress) : HTML", "Full Stack (In Progress) : CSS", "Full Stack (In Progress) : Javascript", "Full Stack (In Progress) : APIs", "Full Stack (In Progress) : Node JS"];
@@ -31,7 +32,23 @@ var marquee = setInterval(function()
 btn_AboutMe.on("click", function()
 {
     event.preventDefault();
-    $(".col-2").css("display", "block");
+    pg_MyWork.css("display", "none");
+    pg_CntctMe.css("display", "none");
     pg_AboutMe.css("display", "block");
-    // pg_AboutMe.SlideDown("slow");
 });
+
+btn_MyWork.on("click", function()
+{
+    event.preventDefault();
+    pg_AboutMe.css("display", "none");
+    pg_CntctMe.css("display", "none");
+    pg_MyWork.css("display", "block");
+});
+
+// btn_ContactMe.on("click", function()
+// {
+//     event.preventDefault();
+//     pg_AboutMe.css("display", "none");
+//     pg_MyWork.css("display", "none");
+//     pg_CntctMe.css("display", "block");
+// });
