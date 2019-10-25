@@ -52,9 +52,19 @@ btn_MyWork.on("click", function () {
   console.log($("#delta_content").html());
   $("#delta_title").text("My Work");
   $("#delta_content").html(
-    `<div>
-    <a href="./assets/BookshelfApp.png" class="app_icon" target="#"><img src="./assets/BookshelfApp.png" width="100vw">
-    <a href="https://kevin-on-davis.github.io/KLIP_Project/">
+    `<div class="row">
+    <div class="col-4">
+    <a href="./assets/BookshelfApp.png" class="app_icon" target="#"><img src="./assets/BookshelfApp.png" width="100vw"></a>
+    <p>Bookshelf<br/>
+    <a href="https://kevin-on-davis.github.io/KLIP_Project/">Deployed Application</a><br/>
+    <a href="https://github.com/kevin-on-davis/KLIP_Project">GitHub Repository</a></p>
+    </div>
+    <div class="col-4">
+      <a href="./assets/WeatherDashboard.png" class="app_icon" target="#"><img src="./assets/WeatherDashboard.png" width="100vw"></a>
+      <p>Weather Dashboard<br/>
+      <a href="https://kevin-on-davis.github.io/L2K_WeatherDashboard/">Deployed Application</a><br />
+      <a href="https://github.com/kevin-on-davis/L2K_WeatherDashboard">GitHub Repository</a></p>
+    </div>
     </div>`
   );
 });
