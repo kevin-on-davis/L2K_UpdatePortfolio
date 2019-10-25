@@ -34,7 +34,16 @@ var marquee = setInterval(function () {
     skill_idx += 1;
   } else {
     skill_idx = 0;
-  }
+  };
+
+  let today = new Date();
+  let start_prd = new Date("September 23 2019"); // Set day and month
+  let end_prd = new Date("December 18 2019"); // Set day and month
+  let msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+  let days_elapsed = Math.round((today - start_prd) / msPerDay);
+  let total_days = Math.round((end_prd - start_prd) / msPerDay);
+  $("#completion_pct").css("height", Math.floor((days_elapsed / total_days) * 100) + "%");
+  $("#completion_pct").text(Math.floor((days_elapsed / total_days) * 100) + "%");
 
   $("#skill_descriptor").html(skill[skill_idx]);
 }, 5000);
