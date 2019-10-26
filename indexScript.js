@@ -74,6 +74,12 @@ btn_MyWork.on("click", function () {
       <a href="https://kevin-on-davis.github.io/L2K_WeatherDashboard/">Deployed Application</a><br />
       <a href="https://github.com/kevin-on-davis/L2K_WeatherDashboard">GitHub Repository</a></p>
     </div>
+    <div class="col-4">
+      <a href="./assets/RandomPasswordGenerator.png" class="app_icon" target="#"><img src="./assets/RandomPasswordGenerator.png" width="100vw"></a>
+      <p>Random Password Generator<br/>
+      <a href="https://kevin-on-davis.github.io/ResponsivePasswordGenerator/">Deployed Application</a><br />
+      <a href="https://github.com/kevin-on-davis/ResponsivePasswordGenerator">GitHub Repository</a></p>
+    </div>
     </div>`
   );
 });
