@@ -15,6 +15,7 @@ var skill = [
   "Backend : SQL",
   "Databases : Oracle",
   "Databases : SQL Server",
+  "Databases : MySQL",
   "Front End : Oracle Apex",
   "Front End : Oracle Forms",
   "Front End : Oracle Reports",
@@ -29,12 +30,12 @@ var skill = [
 var skill_idx = 0;
 $("#skill_descriptor").html(skill[skill_idx]);
 
-var marquee = setInterval(function () {
+var marquee = setInterval(function() {
   if (skill_idx < skill.length - 1) {
     skill_idx += 1;
   } else {
     skill_idx = 0;
-  };
+  }
 
   let today = new Date();
   let start_prd = new Date("September 23 2019"); // Set day and month
@@ -42,13 +43,19 @@ var marquee = setInterval(function () {
   let msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
   let days_elapsed = Math.round((today - start_prd) / msPerDay);
   let total_days = Math.round((end_prd - start_prd) / msPerDay);
-  $("#completion_pct").css("height", Math.floor((days_elapsed / total_days) * 100) + "%");
-  $("#completion_pct").text(Math.floor((days_elapsed / total_days) * 100) + "%");
+  $("#completion_pct").css(
+    "height",
+    Math.floor((days_elapsed / total_days) * 100) + "%"
+  );
+  $("#completion_pct").css("text-center");
+  $("#completion_pct").text(
+    Math.floor((days_elapsed / total_days) * 100) + "%"
+  );
 
   $("#skill_descriptor").html(skill[skill_idx]);
 }, 5000);
 
-btn_AboutMe.on("click", function () {
+btn_AboutMe.on("click", function() {
   event.preventDefault();
   $("#delta_title").text("About Me");
   $("#delta_content").html(
@@ -56,7 +63,7 @@ btn_AboutMe.on("click", function () {
   );
 });
 
-btn_MyWork.on("click", function () {
+btn_MyWork.on("click", function() {
   event.preventDefault();
   console.log($("#delta_content").html());
   $("#delta_title").text("My Work");
